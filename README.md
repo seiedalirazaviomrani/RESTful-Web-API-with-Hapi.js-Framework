@@ -11,7 +11,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-Installing Node and NPM is pretty straightforward using the installer package available from the (Node.js® web site)[https://nodejs.org/en/].
+Installing Node and NPM is pretty straightforward using the installer package available from the [Node.js® web site](https://nodejs.org/en/).
 
 ### Installing
 
@@ -34,13 +34,15 @@ npm install hapi --save
 
 - For testing the endpoints, try one of the tools listed below:
 
-* [Postman]https://www.getpostman.com/) is a powerful tool used to test web services. It was developed for sending HTTP requests in a simple and quick way.
-* [CURL](https://curl.haxx.se/) is a command-line tool used to deliver requests supporting a variety of protocols like HTTP, HTTPS, FTP, FTPS, SFTP, and many more.
+ * [Postman](https://www.getpostman.com/) is a powerful tool used to test web services. It was developed for sending HTTP requests in a simple and quick way.
+ * [CURL](https://curl.haxx.se/) is a command-line tool used to deliver requests supporting a variety of protocols like HTTP, HTTPS, FTP, FTPS, SFTP, and many more.
 
 ## Running the tests
 
 To test code:
+
 1: Open a command prompt or shell terminal after install node.js.
+
 2: Enter a node session, also known as REPL (Read-Evaluate-Print-Loop).
 ```
 node
@@ -50,6 +52,7 @@ node
 > .load index.js
 ```
 4: Open another command prompt or shell terminal after loading index.js.
+
 5: Run the following command in the new command prompt or shell terminal to add a block to the chain.
 ```
 curl -H "Content-Type: application/json" -X POST http://localhost:8000/block -d "{\"body\":\"Testing block with test string data\"}"
@@ -65,9 +68,9 @@ curl "http://localhost:8000/block/1"
 * [LevelDB](https://github.com/Level/level) - Persist data with LevelDB
 * [Crypto-js](https://www.npmjs.com/package/crypto-js) - SHA256 with Crypto-js
 
-## Authors
+## Author
 
-* **Seied Ali Razavi Omrani** - [GitHub profile](https://github.com/seiedalirazaviomrani)
+**Seied Ali Razavi Omrani** - [GitHub profile](https://github.com/seiedalirazaviomrani)
 
 ## License
 
