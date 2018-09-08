@@ -47,9 +47,9 @@ To test code:
 ```
 node
 ```
-3: Load the index.js file by the `.load` command.
+3: Run the index.js file.
 ```
-> .load index.js
+node index.js
 ```
 4: Open another command prompt or shell terminal after loading index.js.
 
@@ -60,6 +60,37 @@ curl -H "Content-Type: application/json" -X POST http://localhost:8000/block -d 
 6: Run the following command in the new terminal to call a block from the chain. (The following example calls the block 1 from the chain.)
 ```
 curl "http://localhost:8000/block/1"
+```
+
+## `GET` and `POST` endpoints
+
+I have three endpoints in this project that listed below:
+
+1. The root `GET` route with `/` path address. You can test this route by following curl command:
+```
+curl "http://localhost:8000/"
+```
+and the result is the same as the following:
+```
+Welcome to the "RESTful Web API with Hapi.js Framework" project.
+```
+
+2. Another `GET` method to get a block of the chain with `/block/{blockNumber}` path address. You can test this route by following sample curl command:
+```
+curl "http://localhost:8000/block/0"
+```
+and the result is the same as the following. This curl command is to call the genesis block of the chain.
+```
+{"hash":"6f36f41443ac07901c3d1c96f42d99e0399fb45b434fd07e858c65828481b1e3","height":0,"body":"The first block in the chain -- Genesis block.","time":"1536436758","previousBlockHash":""}
+```
+
+3. The `POST` method to add a new block to the chain with `/block` path address. You can test this route by following sample curl command:
+```
+curl -H "Content-Type: application/json" -X POST http://localhost:8000/block -d "{\"body\":\"Testing block with test string data\"}"
+```
+and the response for the endpoint is a block object in JSON format same as the following:
+```
+{"body":"Testing block with test string data"}
 ```
 
 ## Built With

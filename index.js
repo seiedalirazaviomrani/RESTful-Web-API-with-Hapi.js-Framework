@@ -13,6 +13,11 @@ const server=Hapi.server({
 
 // Add the route
 server.route([
+    { method: 'GET',
+    path:'/',
+    handler: function(request,h){
+        return "Welcome to the \"RESTful Web API with Hapi.js Framework\" project.";
+    }},
     { method:'GET',
     path:'/block/{blockNumber}',
     handler:async function(request,h) {
@@ -30,7 +35,7 @@ server.route([
             return "ERROR!\n" + "Please add the block data to your POST request!";
         } else {
             blockchain.addBlock(request.payload);
-            return "POST done!\n" + JSON.stringify(request.payload).toString();
+            return JSON.stringify(request.payload).toString();
         }
     }}
 ]);
