@@ -32,10 +32,10 @@ npm install level --save
 npm install hapi --save
 ```
 
-- For testing the endpoints, try one of the tools listed below:
+For testing the endpoints, try one of the tools listed below:
 
- ** [Postman](https://www.getpostman.com/) is a powerful tool used to test web services. It was developed for sending HTTP requests in a simple and quick way.
- ** [CURL](https://curl.haxx.se/) is a command-line tool used to deliver requests supporting a variety of protocols like HTTP, HTTPS, FTP, FTPS, SFTP, and many more.
+- [Postman](https://www.getpostman.com/) is a powerful tool used to test web services. It was developed for sending HTTP requests in a simple and quick way.
+- [CURL](https://curl.haxx.se/) is a command-line tool used to deliver requests supporting a variety of protocols like HTTP, HTTPS, FTP, FTPS, SFTP, and many more.
 
 ## Running the tests
 
